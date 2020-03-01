@@ -1,0 +1,241 @@
+addusers,add or list users to/from a csv file
+admodcmd,active directory bulk modify
+arp,address resolution protocol
+assoc,change file extension associations
+attrib,change file attributes
+bcdboot,create or repair a system partition
+bcdedit,manage boot configuration data
+bitsadmin,background intelligent transfer service
+browstat,get domain, browser and pdc info
+cacls,change file permissions
+call,call one batch program from another
+certreq,request certificate from a certification authority
+certutil,manage certification authority (ca) files and services
+cd,change directory - move to a specific folder
+change,change terminal server session properties
+chcp,change the active console code page
+chkdsk,check disk - check and repair disk problems
+chkntfs,check the ntfs file system
+choice,accept keyboard input to a batch file
+cipher,encrypt or decrypt files/folders
+cleanmgr,automated cleanup of temp files, recycle bin
+clip,copy stdin to the windows clipboard
+cls,clear the screen
+cmd,start a new cmd shell
+cmdkey,manage stored usernames/passwords
+color,change colors of the cmd window
+comp,compare the contents of two files or sets of files
+compact,compress files or folders on an ntfs partition
+compress,compress one or more files
+con,console input
+convert,convert a fat drive to ntfs
+copy,copy one or more files to another location
+coreinfo,show the mapping between logical & physical processors
+csccmd,client-side caching (offline files)
+csvde,import or export active directory data
+curl,transfer data from or to a server
+date,display or set the date
+defrag,defragment hard drive
+del,delete one or more files
+delprof,delete user profiles
+deltree,delete a folder and all subfolders
+devcon,device manager command line utility
+dir,display a list of files and folders
+dirquota,file server resource manager disk quotas
+diruse,display disk usage
+diskpart,disk administration
+diskshadow,volume shadow copy service
+diskuse,show the space used in folders
+dism,deployment image servicing and management
+dnscmd,manage dns servers
+doskey,edit command line, recall commands, and create macros
+driverquery,display installed device drivers
+dsacls,active directory acls
+dsadd,add items to active directory (user group computer)
+dsget,view items in active directory (user group computer)
+dsquery,search active directory (user group computer)
+dsmod,modify items in active directory (user group computer)
+dsmove,move an active directory object
+dsrm,remove items from active directory
+dsmgmt,directory service management
+echo,display message on screen
+endlocal,end localisation of the environment in a batch file
+erase,delete one or more files
+eventcreate,add a message to the windows event log
+exit,quit the current script/routine and set an errorlevel
+expand,uncompress cab files
+explorer,open windows explorer
+extract,uncompress cab files
+fc,compare two files
+find,search for a text string in a file
+findstr,search for strings in files
+fltmc,manage minifilter drivers
+for /f,loop command: against a set of files
+for /f,loop command: against the results of another command
+for,loop command: all options files, directory, list
+forfiles,batch process multiple files
+format,format a disk
+freedisk,check free disk space
+fsutil,file and volume utilities
+ftp,file transfer protocol
+ftype,file extension file type associations
+getmac,display the media access control (mac) address
+goto,direct a batch program to jump to a labelled line
+gpresult,display resultant set of policy information
+gpupdate,update group policy settings
+help,help
+hostname,display the host name of the computer
+icacls,change file and folder permissions
+iexpress,create a self extracting zip file archive
+if,conditionally perform a command
+ifmember,is the current user a member of a group
+ipconfig,configure ip
+inuse,replace files that are in use by the os
+label,edit a disk label
+lgpo,local group policy object utility
+lodctr,load perfmon performance counters
+logman,manage performance monitor logs
+logoff,log a user off
+logtime,log the date and time in a file
+makecab,create .cab files
+mapisend,send email from the command line
+manage-bde,bitlocker drive encryption
+mbsacli,baseline security analyzer
+md,create a new directory
+mklink,create a symbolic link (linkd)
+mode,configure a system device com/lpt/con
+more,display output, one screen at a time
+mountvol,manage a volume mount point
+move,move files from one folder to another
+moveuser,move a user from one domain to another
+msg,send a message
+msiexec,microsoft windows installer
+msinfo32,system information
+mstsc,terminal server connection/remote desktop protocol(rdp)
+net,manage network resources
+netdom,domain manager
+netsh,configure network interfaces, firewall & remote access
+nbtstat,display networking statistics (netbios over tcp/ip)
+netstat,display networking statistics (tcp/ip)
+nlsinfo,display locale information (reskit).
+nltest,network location test (ad)
+now,display the current date and time
+nslookup,name server lookup
+ntbackup,windows backup folders to tape
+ntdsutil,active directory domain services management
+ntrights,edit user account rights
+nvspbind,modify network bindings
+openfiles,query or display open files
+path,display or set a search path for executable files
+pathping,trace route plus network latency and packet loss
+pause,suspend processing of a batch file
+perms,show permissions for a user
+ping,test a network connection
+popd,return to a previous directory saved by pushd
+portqry,display the status of ports and services
+powercfg,configure power settings
+print,print a text file
+printbrm,print queue backup/recovery
+prncnfg,configure or rename a printer
+prnmngr,add, delete, list printers and printer connections
+procdump,monitor an application for cpu spikes
+prompt,change the command prompt
+psexec,execute process remotely
+psfile,show files opened remotely
+psgetsid,display the sid of a computer or a user
+psinfo,list information about a system
+pskill,kill processes by name or process id
+pslist,list detailed information about processes
+psloggedon,who's logged on (locally or via resource sharing)
+psloglist,event log records
+pspasswd,change account password
+psping,measure network performance
+psservice,view and control services
+psshutdown,shutdown or reboot a computer
+pssuspend,suspend processes
+pushd,save and then change the current directory
+qgrep,search file(s) for lines that match a given pattern
+query,process / qprocess  display processes
+query,session / qwinsta   display all sessions (ts/remote desktop)
+query,termserver /qappsrv list all servers (ts/remote desktop)
+query user    / quser,display user sessions (ts/remote desktop)
+rasdial,manage ras connections
+rasphone,manage ras connections
+rd,delete a directory
+recover,recover a damaged file from a defective disk
+reg,registry: read, set, export, delete keys and values
+regedit,import or export registry settings
+regsvr32,register or unregister a dll
+regini,change registry permissions
+rem,record comments (remarks) in a batch file
+ren,rename a file or files
+replace,replace or update one file with another
+reset session,delete a remote desktop session
+rmtshare,share a folder or a printer
+robocopy,robust file and folder copy
+route,manipulate network routing tables
+runas,execute a program under a different user account
+rundll32,run a dll command (add/remove print connections)
+sc,service control
+schtasks,schedule a command to run at a specific time
+set,display, set, or remove session environment variables
+setlocal,control the visibility of environment variables
+setspn,edit service principal names
+setx,set environment variables
+sfc,system file checker
+share,list or edit a file share or print share
+shellrunas,run a command under a different user account
+shift,shift the position of batch file parameters
+shortcut,create a windows shortcut (.lnk file)
+shutdown,shutdown the computer
+sigcheck,display file version no. virustotal status & timestamp
+sleep,wait for x seconds
+slmgr,software licensing management (vista/2008)
+sort,sort input
+ssh,openssh remote login client
+start,start a program, command or batch file
+strings,search for ansi and unicode strings in binary files
+subinacl,edit file and folder permissions, ownership and domain
+subst,associate a path with a drive letter
+sysmon,monitor and log system activity to the windows event log
+systeminfo,list system configuration
+takeown,take ownership of a file
+tar,store, list or extract files in an archive
+tasklist,list running applications and services
+taskkill,end a running process
+telnet,communicate with another host using the telnet protocol
+time,display or set the system time
+timeout,delay processing of a batch file/command
+title,set the window title for a cmd.exe session
+tlist,task list with full path
+touch,change file timestamps
+tracert,trace route to a remote host
+tree,graphical display of folder structure
+tsdiscon,disconnect a remote desktop session
+tskill,end a running process
+type,display the contents of a text file
+typeperf write performance monitor data to a log file
+tzutil,time zone utility
+ver,display version information
+verify,verify that files have been saved
+vmconnect,connect to a hyper-v virtual machine
+vol,display a disk label
+vssadmin,display volume shadow copy backups + writers/providers.
+w32tm,time service
+waitfor,wait for or send a signal
+wbadmin,windows backup admin
+wecutil,windows event collector utility
+wevtutil,clear event logs, enable/disable/query logs
+where,locate and display files in a directory tree
+whoami,output the current username and domain
+windiff,compare the contents of two files or sets of files
+winrm,windows remote management
+winrs,windows remote shell
+wmic,wmi commands
+wpeutil,run winpe commands
+wpr,windows performance recorder
+wusa,windows update standalone installer
+wuauclt,windows update
+xcacls,change file and folder permissions
+xcopy,copy files and folders
+::,comment / remark
