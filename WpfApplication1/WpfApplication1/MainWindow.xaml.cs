@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
+using System.IO;
 
 namespace WpfApplication1
 {
@@ -21,10 +22,6 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
-
-
-
-
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +39,7 @@ namespace WpfApplication1
         {
             if (e.Key == Key.RightCtrl)
             {
-                if(LblSolve.Content.ToString().Length >= 1)
+                if (LblSolve.Content.ToString().Length >= 1)
                 {
                     Txtcommand.Focus();
                     string[] TMP = new string[2];
@@ -60,6 +57,7 @@ namespace WpfApplication1
                     {
                         if (char.IsLetter(Txtcommand.Text[0]))
                         {
+                            File.AppendAllText("hisory.list.csv","\n"+Txtcommand.Text);
                             System.Diagnostics.Process.Start("CMD.exe", "/k" + Txtcommand.Text);
                         }
                     }
@@ -97,7 +95,6 @@ namespace WpfApplication1
                         }
                     }
                 }
-
                 else
                 {
                     if (DoCMD.IsChecked == true)
@@ -106,6 +103,19 @@ namespace WpfApplication1
                         WinF.Height = 155;
                         LblSolve.FontSize = 20;
                         LblSolve.Content = CsvReader.Lines("Command.List.csv", Txtcommand.Text);
+
+                        try
+                        {
+                            if (LblSolve.Content.ToString() == string.Empty)
+                            {
+                                LblSolve.Content = CsvReader.Lines("hisory.list.csv", Txtcommand.Text);
+                            }
+                        }
+                        catch
+                        {
+                            LblSolve.Content = CsvReader.Lines("hisory.list.csv", Txtcommand.Text);
+                        }
+
                     }
                 }
             }

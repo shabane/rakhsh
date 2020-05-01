@@ -8,13 +8,17 @@ namespace WpfApplication1
 {
     static public class CsvReader
     {
+        public static string GotIt;
+
         public static string Lines(string path, string SearchSentenc)
         {
-            string GotIt = string.Empty;
+            GotIt = "!";
 
             string[] line = File.ReadAllLines(path);
 
-            return Array.Find(line, element => element.StartsWith(SearchSentenc, StringComparison.Ordinal));
+            GotIt = Array.Find(line, element => element.StartsWith(SearchSentenc, StringComparison.Ordinal));
+           
+            return GotIt;
         }
     }
 }
