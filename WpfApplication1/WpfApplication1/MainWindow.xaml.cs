@@ -39,11 +39,11 @@ namespace WpfApplication1
         {
             if (e.Key == Key.RightCtrl)
             {
-                if (LblSolve.Content.ToString().Length >= 1)
+                if (LblSolve.Text.ToString().Length >= 1)
                 {
                     Txtcommand.Focus();
                     string[] TMP = new string[2];
-                    TMP = LblSolve.Content.ToString().Split(',');
+                    TMP = LblSolve.Text.ToString().Split(',');
                     Txtcommand.Text = TMP[0];
                     Txtcommand.SelectAll();
                 }
@@ -57,7 +57,7 @@ namespace WpfApplication1
                     {
                         if (char.IsLetter(Txtcommand.Text[0]))
                         {
-                            File.AppendAllText("hisory.list.csv","\n"+Txtcommand.Text);
+                            File.AppendAllText("hisory.list.csv", "\n" + Txtcommand.Text);
                             System.Diagnostics.Process.Start("CMD.exe", "/k" + Txtcommand.Text);
                         }
                     }
@@ -69,9 +69,6 @@ namespace WpfApplication1
         // Calculator // TXT cHANGED
         private void Txtcommand_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-
-
             if (Txtcommand.Text.Length >= 2)
             {
                 if (char.IsDigit(Txtcommand.Text[0]) || Txtcommand.Text[0] == '(')
@@ -79,13 +76,13 @@ namespace WpfApplication1
                     if (DoCalc.IsChecked == true)
                     {
                         LblSolve.Visibility = Visibility.Visible;
-                        LblSolve.Content = "?";
+                        LblSolve.Text = "?";
                         WinF.Height = 150;
                         LblSolve.FontSize = 26;
                         try
                         {
                             string tmp = calcit.postfix(Txtcommand.Text);
-                            LblSolve.Content = calcit.countit(tmp).ToString();
+                            LblSolve.Text = calcit.countit(tmp).ToString();
                             calcit.CleanAll();
                         }
                         catch
@@ -95,33 +92,44 @@ namespace WpfApplication1
                         }
                     }
                 }
-                else
+                else if (char.IsLetter(Txtcommand.Text[0]))
                 {
                     if (DoCMD.IsChecked == true)
                     {
                         LblSolve.Visibility = Visibility.Visible;
-                        WinF.Height = 155;
+                        WinF.Height = 190;
                         LblSolve.FontSize = 20;
-                        LblSolve.Content = CsvReader.Lines("Command.List.csv", Txtcommand.Text);
+                        LblSolve.Text = CsvReader.Lines("Command.List.csv", Txtcommand.Text);
 
                         try
                         {
-                            if (LblSolve.Content.ToString() == string.Empty)
+                            if (LblSolve.Text.ToString() == string.Empty)
                             {
-                                LblSolve.Content = CsvReader.Lines("hisory.list.csv", Txtcommand.Text);
+                                LblSolve.Text = CsvReader.Lines("hisory.list.csv", Txtcommand.Text);
                             }
                         }
                         catch
                         {
-                            LblSolve.Content = CsvReader.Lines("hisory.list.csv", Txtcommand.Text);
+                            LblSolve.Text = CsvReader.Lines("hisory.list.csv", Txtcommand.Text);
                         }
-
+                    }
+                    if (Txtcommand.Text.Contains("bin>"))
+                    {
+                        try
+                        {
+                            string tmp = Txtcommand.Text.Remove(0, 4);
+                            LblSolve.Text = ToBinary.Num2Bin(Convert.ToInt32(tmp));
+                        }
+                        catch (Exception ex)
+                        {
+                            // MessageBox.Show(ex.Message);
+                        }
                     }
                 }
             }
             else
             {
-                LblSolve.Content = string.Empty;
+                LblSolve.Text = string.Empty;
                 LblSolve.Visibility = Visibility.Hidden;
                 WinF.Height = 97;
             }
@@ -145,21 +153,11 @@ namespace WpfApplication1
         {
             DragMove();
         }
-        bool Vmanpag = true;
 
+        // bool Vmanpag = true;
         private void BtnSetting_Click(object sender, RoutedEventArgs e)
         {
-
-            if (Vmanpag == false)
-            {
-                manpage.Visibility = Visibility.Hidden;
-                Vmanpag = true;
-            }
-            else
-            {
-                manpage.Visibility = Visibility.Visible;
-                Vmanpag = false;
-            }
+            System.Diagnostics.Process.Start("Help.html");
         }
         bool WTDP = true;
         private void Btndolist_Click(object sender, RoutedEventArgs e)
