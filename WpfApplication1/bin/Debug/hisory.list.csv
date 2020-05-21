@@ -1,0 +1,5 @@
+ping 1.1.1.1 -t
+ping 8.8.8.8 -t
+tracert 1.1.1.1
+pathping 1.1.1.1
+pathping 9.9.9.9
