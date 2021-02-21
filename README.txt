@@ -19,4 +19,4 @@ _ subtraction
 3.1 _ Convert Decimal To Binary .
 3.2  _ Convert Decimal To Hex .
 
-_________________IF YOU NEED HELP TO USE , JUST OPEN "Help.html" IN PRIMARY FOLDER OR IN THE APP CLICK ON YELLOW BUTTON
+IF YOU NEED HELP TO USE , JUST OPEN "Help.html" IN PRIMARY FOLDER OR IN THE APP CLICK ON YELLOW BUTTON
