@@ -52,6 +52,6 @@ allways should be togother.
 and i was learning programing, so it contain a lots of bugs.
 
 
-### what the name come from
+### where the name come from
 rakhsh is name of the best frind of rostam who was rescue Iran from the Enemy.
 but just in the story, in the read we stucked with the enemys here. Zahak is our supreme leader :`(
